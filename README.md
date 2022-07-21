@@ -36,9 +36,11 @@ We are only given 2 years of stock data. I would prefer to compare a longer leng
 
 ## Summary
 
-- Using refactoring code has many advantages. The code is less complex, making it much easier to update and maintain. It is much faster to run, especially when datasets are large. A disadvantage of refactoring is that it may introduce more bugs in the code. 
+### General Advantages of Refactoring Code
 
-The inital run times for the code was this in 2017:
+- Using refactoring code has many advantages. The code is less complex, making it much easier to read, update and maintain. It is has a much better performance rate, especially when datasets are large. An example of this difference is in the screentimes below. 
+
+The inital run times for the VBA code was this in 2017:
 
 ![VBA_Challenge_2017_OG](https://user-images.githubusercontent.com/108373151/179380529-c7811935-f9e8-42f7-b239-5a1cebb642b3.png)
 
@@ -54,6 +56,20 @@ and similar in 2018:
 
 ![VBA_Challenge_2018_Refactored](https://user-images.githubusercontent.com/108373151/179380554-e8064a42-cece-4655-bdbf-cbb31b85eb7e.png)
 
-I created one button for the old code and one button for the new refactoring code and the results even ran visibly faster. 
+I created one button for the old code and one button for the new refactoring code and the results even ran visibly faster to the naked eye. 
 
-- The original code was pretty straightforward and easy to program. However, if there needs to be updates or if the dataset is large, running the code can be cumbersome. When updating the old code to refactoring, I encountered some overflow errors because I neglected to update one area to the array. It was difficult to find the problem as the overflow error occurred on a formula line that wasn't where the error in my code was. However, once the code was successfully updated, things ran a lot more smoothly and quickly.
+### General Disadvantages of Refactoring Code
+
+- A disadvantage of refactoring is that it is time consuming to convert old VBA code to new refacotoring code. 
+
+### Comparison of VBA Code to Refactoring Code
+
+- The original code was pretty straightforward and easy to program. It didn't take a lot of time and was easy to understand.
+
+- The original VBA code had a nested For loop which why it takes so much longer to compute. The nested For loop would circle back through the data many times to output the results, thus greatly increasing the amount of memory and time it takes to run. In the refactored code, the nested For loop is taken away, which greatly impacted the speed as shown in the screenshots above.
+
+- If there needs to be updates to the VBA code or if the dataset is large, running the old VBA code can be time and memory cumbersome. I spent a lot of time updating the code to refactoring and getting the formulas right. The benefit I had during updating is that I had good code that I know worked and it was easy in a lot of places to update this to the array/refactoring code. 
+
+- When updating the VBA code, I encountered some overflow errors because I neglected to update one area to the array. It was difficult to find the problem as the overflow error occurred on a formula line that wasn't where the error in my code was - a common problem with VBA programming. However, once the code was successfully updated, things ran a lot more smoothly and quickly.
+
+- It was very helpful to have the old code to compare the results to, so I knew when my refactored code was working correctly.
